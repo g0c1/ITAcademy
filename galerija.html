@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="sr">
+<head>
+  <meta charset="UTF-8">
+  <title>Galerija</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+      background-color: #fff;
+      color: #333;
+    }
+
+    h1 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .galerija {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 20px;
+      margin-bottom: 30px;
+    }
+
+    .plocica {
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+      background-color: rgb(81, 156, 255);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .plocica img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .naziv {
+      background-color: white;
+      padding: 10px;
+      text-align: center;
+      font-size: 14px;
+      color: #333;
+    }
+
+    .opis {
+      max-width: 1000px;
+      margin-top: 10px;
+      font-size: 14px;
+      line-height: 1.6;
+    }
+
+    /* Tablet prikaz: 3 kolone */
+    @media (max-width: 1024px) {
+      .galerija {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    /* Mobilni prikaz: 1 kolona i centriranje */
+    @media (max-width: 768px) {
+      .galerija {
+        grid-template-columns: 1fr;
+        justify-items: center;
+      }
+
+      .plocica {
+        width: 80%;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Gallery Heading</h1>
+
+  <div class="galerija">
+    <div class="plocica"><img src="placeholder-image.png" alt="Slika 1"><div class="naziv">Image Title</div></div>
+    <div class="plocica"><img src="placeholder-image.png" alt="Slika 2"><div class="naziv">Image Title</div></div>
+    <div class="plocica"><img src="placeholder-image.png" alt="Slika 3"><div class="naziv">Image Title</div></div>
+    <div class="plocica"><img src="placeholder-image.png" alt="Slika 4"><div class="naziv">Image Title</div></div>
+    <div class="plocica"><img src="placeholder-image.png" alt="Slika 5"><div class="naziv">Image Title</div></div>
+    <div class="plocica"><img src="placeholder-image.png" alt="Slika 6"><div class="naziv">Image Title</div></div>
+    <div class="plocica"><img src="placeholder-image.png" alt="Slika 7"><div class="naziv">Image Title</div></div>
+    <div class="plocica"><img src="placeholder-image.png" alt="Slika 8"><div class="naziv">Image Title</div></div>
+    <div class="plocica"><img src="placeholder-image.png" alt="Slika 9"><div class="naziv">Image Title</div></div>
+    <div class="plocica"><img src="placeholder-image.png" alt="Slika 10"><div class="naziv">Image Title</div></div>
+  </div>
+
+  <p class="opis">
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras a lacinia nisl, nec tristique sem. 
+    Cras id tellus ac mauris posuere varius. Pellentesque vel mi justo. Aenean malesuada purus eu lacinia finibus. 
+    Praesent commodo suscipit odio, eu pharetra nulla dignissim nec. Ut ut nulla augue. Duis ultrices euismod purus, 
+    ut lobortis tortor semper a. Nam eleifend accumsan elit, in imperdiet lacus. Nunc varius imperdiet nisl, eget 
+    pretium augue malesuada a. Nullam ut malesuada enim. Integer non velit fringilla, porta ex vitae, porttitor velit. 
+    Ut luctus lacinia libero a scelerisque. Ut ullamcorper arcu et mauris ullamcorper tempor.
+  </p>
+
+</body>
+</html>
